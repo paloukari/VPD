@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9,00"
+	Name="VPDUI"
+	ProjectGUID="{104A8DED-2884-4147-A2C8-5AEB489043CE}"
+	RootNamespace="VPDUI"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="196613"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ProjectDir)\objchk_win7_x86"
+			IntermediateDirectory="$(ProjectDir)\objchk_win7_x86"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk win7&#x0D;&#x0A;cd /d $(ProjectDir)\src&#x0D;&#x0A;build"
+				ReBuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk win7&#x0D;&#x0A;cd /d $(ProjectDir)\src&#x0D;&#x0A;build /c"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objchk_win7_x86"
+				Output="$(ProjectDir)\objchk_win7_x86\i386\VPDUI..dll"
+				PreprocessorDefinitions="STRICT;_UNICODE;UNICODE;USERMODE_DRIVER;WIN32;_CONSOLE;_X86_;_DDK_;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;./inc;$(NMakeIncludeSearchPath)"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="$(ProjectDir)\objchk_win7_amd64"
+			IntermediateDirectory="$(ProjectDir)\objchk_win7_amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk x64 win7&#x0D;&#x0A;cd /d $(ProjectDir)\src&#x0D;&#x0A;build"
+				ReBuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk x64 win7&#x0D;&#x0A;cd /d $(ProjectDir)\src&#x0D;&#x0A;build /c"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objchk_win7_amd64"
+				Output="$(ProjectDir)\objchk_win7_amd64\amd64\VPDUI.dll"
+				PreprocessorDefinitions="STRICT;_UNICODE;UNICODE;USERMODE_DRIVER;_CONSOLE;_AMD64_;_DDK_;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;./inc;$(NMakeIncludeSearchPath)"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(ProjectDir)\objfre_win7_x86"
+			IntermediateDirectory="$(ProjectDir)\objfre_win7_x86"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				ReBuildCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_x86&#x0D;&#x0A;call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_x86"
+				Output="$(ProjectDir)\objfre_win7_x86\i386\VPDUI.sys"
+				PreprocessorDefinitions="WIN32;_CONSOLE;_X86_;_DDK_;_NDEBUG;DBG=0"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="$(ProjectDir)\objfre_win7_amd64"
+			IntermediateDirectory="$(ProjectDir)\objfre_win7_amd64"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre AMD64 win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				ReBuildCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_amd64&#x0D;&#x0A;call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre AMD64 win7&#x0D;&#x0A;cd /d $(ProjectDir)&#x0D;&#x0A;build"
+				CleanCommandLine="rmdir /s /q $(ProjectDir)\objfre_win7_amd64"
+				Output="$(ProjectDir)\objfre_win7_amd64\amd64\VPDUI.sys"
+				PreprocessorDefinitions="WIN32;_CONSOLE;_AMD64_;_DDK_;_NDEBUG;DBG=0"
+				IncludeSearchPath="$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			>
+			<File
+				RelativePath=".\src\bitmap.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\dllExports.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\ntspl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\paper.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\vphelper.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\vpui.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+			>
+			<File
+				RelativePath=".\src\plotui.rc"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			>
+			<File
+				RelativePath=".\inc\precomp.h"
+				>
+			</File>
+			<File
+				RelativePath=".\inc\resourceui.h"
+				>
+			</File>
+			<File
+				RelativePath=".\inc\vphelper.h"
+				>
+			</File>
+			<File
+				RelativePath=".\inc\vpui.h"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\src\makefile"
+			>
+		</File>
+		<File
+			RelativePath=".\src\makefile.inc"
+			>
+		</File>
+		<File
+			RelativePath=".\src\sources"
+			>
+		</File>
+		<File
+			RelativePath=".\src\vpdui.def"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

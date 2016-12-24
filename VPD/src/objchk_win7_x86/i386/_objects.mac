@@ -1,0 +1,19 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\vpd.obj \
+
+
+_RES_FILE=$(OBJ_PATH)\$O\vpd.res
+PRECOMPILED_INCLUDE_BASENAME=precomp.h
+
+
+
+
+# lowercased
+BASEDIR=c:\winddk\7600.16385.1
+OBJECT_ROOT=c:\winddk\7600.16385.1
+MAKEDIR_LOWERCASE=c:\vpd\vpd\src
+OBJ_PATH=c:\vpd\vpd\src
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

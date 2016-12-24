@@ -1,0 +1,15 @@
+LIBRARY vpdtui
+
+EXPORTS
+    DllMain
+    DrvDeviceCapabilities
+    DevQueryPrintEx
+    DrvDevicePropertySheets
+    DrvSplDeviceCaps
+    DrvDocumentPropertySheets
+    DrvConvertDevMode
+    DrvPrinterEvent
+	DrvDocumentEvent
+
+
+		

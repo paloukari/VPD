@@ -1,0 +1,25 @@
+
+
+AMD64_OBJECTS=\
+ $(OBJ_PATH)\$O\dllexports.obj \
+ $(OBJ_PATH)\$O\vpui.obj \
+ $(OBJ_PATH)\$O\bitmap.obj \
+ $(OBJ_PATH)\$O\paper.obj \
+ $(OBJ_PATH)\$O\ntspl.obj \
+ $(OBJ_PATH)\$O\vphelper.obj \
+
+
+_RES_FILE=$(OBJ_PATH)\$O\plotui.res
+PRECOMPILED_INCLUDE_BASENAME=precomp.h
+
+
+
+
+# lowercased
+BASEDIR=c:\winddk\7600.16385.1
+OBJECT_ROOT=c:\winddk\7600.16385.1
+MAKEDIR_LOWERCASE=c:\winddk\7600.16385.1\src\print\vpd\vpdui\vpdui\src
+MAKEDIR_RELATIVE_TO_BASEDIR=src\print\vpd\vpdui\vpdui\src
+OBJ_PATH=c:\winddk\7600.16385.1\src\print\vpd\vpdui\vpdui\src
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

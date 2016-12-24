@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{104A8DED-2884-4147-A2C8-5AEB489043CE}</ProjectGuid>
+    <RootNamespace>VPDUI</RootNamespace>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)\objchk_win7_x86\</OutDir>
+    <IntDir>$(ProjectDir)\objchk_win7_x86\</IntDir>
+    <NMakeBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk win7
+cd /d $(ProjectDir)\src
+build</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk win7
+cd /d $(ProjectDir)\src
+build /c</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir /s /q $(ProjectDir)\objchk_win7_x86</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)\objchk_win7_x86\i386\VPDUI..dll</NMakeOutput>
+    <NMakePreprocessorDefinitions>STRICT;_UNICODE;UNICODE;USERMODE_DRIVER;WIN32;_CONSOLE;_X86_;_DDK_;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;./inc;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)\objchk_win7_amd64\</OutDir>
+    <IntDir>$(ProjectDir)\objchk_win7_amd64\</IntDir>
+    <NMakeBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk x64 win7
+cd /d $(ProjectDir)\src
+build</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) chk x64 win7
+cd /d $(ProjectDir)\src
+build /c</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir /s /q $(ProjectDir)\objchk_win7_amd64</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)\objchk_win7_amd64\amd64\VPDUI.dll</NMakeOutput>
+    <NMakePreprocessorDefinitions>STRICT;_UNICODE;UNICODE;USERMODE_DRIVER;_CONSOLE;_AMD64_;_DDK_;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;./inc;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)\objfre_win7_x86\</OutDir>
+    <IntDir>$(ProjectDir)\objfre_win7_x86\</IntDir>
+    <NMakeBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7
+cd /d $(ProjectDir)
+build</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>rmdir /s /q $(ProjectDir)\objfre_win7_x86
+call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre win7
+cd /d $(ProjectDir)
+build</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir /s /q $(ProjectDir)\objfre_win7_x86</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)\objfre_win7_x86\i386\VPDUI.sys</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_X86_;_DDK_;_NDEBUG;DBG=0;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)\objfre_win7_amd64\</OutDir>
+    <IntDir>$(ProjectDir)\objfre_win7_amd64\</IntDir>
+    <NMakeBuildCommandLine>call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre AMD64 win7
+cd /d $(ProjectDir)
+build</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>rmdir /s /q $(ProjectDir)\objfre_win7_amd64
+call $(WDKPATH)\bin\setenv.bat $(WDKPATH) fre AMD64 win7
+cd /d $(ProjectDir)
+build</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>rmdir /s /q $(ProjectDir)\objfre_win7_amd64</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)\objfre_win7_amd64\amd64\VPDUI.sys</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_NDEBUG;DBG=0;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)\inc\ddk;$(WDKPATH)\inc\api;$(WDKPATH)\inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\bitmap.cpp" />
+    <ClCompile Include="src\dllExports.cpp" />
+    <ClCompile Include="src\ntspl.cpp" />
+    <ClCompile Include="src\paper.cpp" />
+    <ClCompile Include="src\vphelper.cpp" />
+    <ClCompile Include="src\vpui.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\plotui.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\precomp.h" />
+    <ClInclude Include="inc\resourceui.h" />
+    <ClInclude Include="inc\vphelper.h" />
+    <ClInclude Include="inc\vpui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\makefile" />
+    <None Include="src\makefile.inc" />
+    <None Include="src\sources" />
+    <None Include="src\vpdui.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

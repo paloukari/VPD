@@ -1,0 +1,8 @@
+LIBRARY VPD
+
+
+EXPORTS    
+	DllMain
+    DrvQueryDriverInfo
+    DrvEnableDriver
+    DrvDisableDriver

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+<OACRDEFECTCOUNT>1</OACRDEFECTCOUNT>
+<OACRERRORCOUNT>0</OACRERRORCOUNT>
+<DEFECT _seq="1"><OACRCOMPUNIT>c:\winddk\7600.16385.1\src\print\vpd\vpdui\vpdui\src\vpui.cpp</OACRCOMPUNIT><SFA><LINE>457</LINE><COLUMN>0</COLUMN><FILENAME>crtdefs.h</FILENAME><FILEPATH>c:\winddk\7600.16385.1\inc\crt\</FILEPATH></SFA><DEFECTCODE>20051</DEFECTCODE><DESCRIPTION>PREfast - Error processing 'vpui.cpp' : error C2371: 'size_t' : redefinition; different basic types (try ' oacr log WDKSamples:amd64chk ' for details)</DESCRIPTION><FUNCTION></FUNCTION><FUNCLINE></FUNCLINE><PATH/></DEFECT>
+</DEFECTS>

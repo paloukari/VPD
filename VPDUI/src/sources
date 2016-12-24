@@ -1,0 +1,47 @@
+TARGETNAME=vpdui
+TARGETTYPE=DYNLINK
+TARGETLIBS=$(SDK_LIB_PATH)\advapi32.lib                 \
+           $(SDK_LIB_PATH)\user32.lib                   \
+           $(SDK_LIB_PATH)\kernel32.lib                 \
+           $(SDK_LIB_PATH)\winspool.lib                 \
+           $(SDK_LIB_PATH)\shell32.lib                  \
+           $(SDK_LIB_PATH)\gdi32.lib                    \
+           $(SDK_LIB_PATH)\Comdlg32.lib
+
+#USE_NTDLL=1
+USE_MSVCRT=1
+DLLENTRY=_DllMainCRTStartup
+
+INCLUDES=./;../;../inc;../../../VPD/VPD/inc;../lib;../../lib;../../../../inc; \
+         ../../../../../inc;
+
+C_DEFINES=$(C_DEFINES) -DUMODE -DSTRICT -DUNICODE -D_UNICODE
+
+!IFNDEF MSC_WARNING_LEVEL
+MSC_WARNING_LEVEL=/W3
+!ENDIF
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX
+
+SOURCES=dllexports.cpp  \
+        vpui.cpp \
+        bitmap.cpp   \
+        paper.cpp    \
+        ntspl.cpp    \
+        vphelper.cpp \
+        plotui.rc
+
+PRECOMPILED_INCLUDE=../inc/precomp.h
+
+LOCALIZE_BASE_FILE=1
+
+MUI_BIDI_IMG=1
+
+!IF "$(BUILD_PASS)" == "PASS2" || "$(BUILD_PASS)" == "PASSALL"
+NTTARGETFILES=COPYDLL
+!ENDIF
+
+# Build with Vista libs but make sure sample can still run downlevel
+_NT_TARGET_VERSION=$(_NT_TARGET_VERSION_WINXP)
+WIN32_WINNT_VERSION =$(LATEST_WIN32_WINNT_VERSION)
+NTDDI_VERSION=$(LATEST_NTDDI_VERSION)
+
